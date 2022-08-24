@@ -18,7 +18,7 @@ export default function Pokedex() {
     const classes = useStyles();
     const [pokemonData, setPokemonData] = useState(null)
     useEffect(()=>{
-        axios.get(`${POKEMON_API_URL}?limit=800`).then((res)=>{
+        axios.get(`${POKEMON_API_URL}?limit=50`).then((res)=>{
             //console.log(res.data)
             if(res.status >=200 && res.status <=300){
                 const {results} = res.data;
